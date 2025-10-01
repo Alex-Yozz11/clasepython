@@ -19,3 +19,6 @@ else:
         print("Puedes entrar con permiso")
     else:
         print("No puedes entrar")
+
+#Bucles
+
