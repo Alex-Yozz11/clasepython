@@ -36,3 +36,14 @@ def mostrar():
     print("Dentro de la funcion:", x)
 mostrar()
 print("Fuera de la funcion:", x)
+
+#Cambio de una variable global en un funcion
+contador = 0
+
+def incrementar():
+    global contador
+    contador += 1
+
+incrementar()
+incrementar()
+print("El contador es:", contador)
