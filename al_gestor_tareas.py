@@ -245,8 +245,8 @@ def eliminar_tarea():
 
     for i, tarea in enumerate(tareas):
         if tarea["id"] == id_buscado:
-            confirmacion = input("¿Seguro que deseas eliminar esta tarea? (s/n): ")
-            if confirmacion.lower() == "s":
+            confirmacion = input("¿Seguro que deseas eliminar esta tarea? (si/no): ")
+            if confirmacion.lower() == "si":
                 tareas.pop(i)
                 print("Tarea eliminada correctamente.")
             else:
