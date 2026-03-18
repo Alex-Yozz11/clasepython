@@ -1,4 +1,3 @@
-from datetime import datetime
 
 """
 *** SISTEMA DE LISTA DE TAREA PERSONAL ***
@@ -7,7 +6,7 @@ El sistema utiliza una lista para almacenar tareas
 y aplica operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
 """
 
-print("*** SISTEMA DE LISTA DE TAREA PERSONAL ***")
+from datetime import datetime
 
 tareas = []
 siguiente_id = 1
@@ -302,29 +301,33 @@ def buscar_tarea():
     if not encontradas:
         print("No se encontraron tareas con esa palabra.")
 
+def main():
+    print("*** SISTEMA DE LISTA DE TAREA PERSONAL ***")
+    while True:
+        mostrar_menu()
+        opcion = input("Selecciona una opcion: ")
 
-while True:
-    mostrar_menu()
-    opcion = input("Selecciona una opcion: ")
+        if opcion == "1":
+            agregar_tarea()
+        elif opcion == "2":
+            ver_todas_tareas()
+        elif opcion == "3":
+            ver_tareas_pendientes()
+        elif opcion == "4":
+            ver_tareas_completadas()
+        elif opcion == "5":
+            marcar_tarea_completada()
+        elif opcion == "6":
+            editar_tarea()
+        elif opcion == "7":
+            eliminar_tarea()
+        elif opcion == "8":
+            buscar_tarea()
+        elif opcion == "9":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opcion invalida.")
 
-    if opcion == "1":
-        agregar_tarea()
-    elif opcion == "2":
-        ver_todas_tareas()
-    elif opcion == "3":
-        ver_tareas_pendientes()
-    elif opcion == "4":
-        ver_tareas_completadas()
-    elif opcion == "5":
-        marcar_tarea_completada()
-    elif opcion == "6":
-        editar_tarea()
-    elif opcion == "7":
-        eliminar_tarea()
-    elif opcion == "8":
-        buscar_tarea()
-    elif opcion == "9":
-        print("Saliendo del programa...")
-        break
-    else:
-        print("Opcion invalida.")
+if __name__ == "__main__":
+    main()
